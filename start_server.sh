@@ -1,8 +1,5 @@
-read -p "Please enter the email: " email
-read -p "Please enter the API token: " token
+echo "\nCaution: Please make sure you run add_secret.sh first!\n"
 yarn install
 cd server
-echo "EMAIL=$email" >> .env
-echo "ZENDESK_TOKEN=$token" >> .env
 yarn install
 yarn start
