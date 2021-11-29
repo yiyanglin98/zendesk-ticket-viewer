@@ -20,7 +20,7 @@ It installs the dependencies and start the server.
 
 ### `yarn start`
 
-It starts the frontend. Run it under the zendesk-ticket-viewer founder. 
+It starts the frontend. Run it under the zendesk-ticket-viewer folder. 
 
 ### `sh ./run_tests.sh`
 
