@@ -8,7 +8,7 @@ It supports wrong credentials or API being unavaliable.
 
 ## Usage
 
-There are some scripts/command to run to start the app. 
+There are some scripts/command to run in order to start the app. 
 
 ### `sh ./add_secret.sh`
 
