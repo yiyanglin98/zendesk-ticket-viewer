@@ -20,7 +20,7 @@ function DetailView() {
     useEffect(() => {
         async function getUser() {
             try {
-                const response = await axios.get(`http://localhost:3001/api/user?id=${requesterId}`)
+                const response = await axios.get(`http://localhost:3001/api/user?id=${requesterId}`, { timeout: 5000 })
                 console.log(response)
                 setUserObject(response.data)
             } catch (error) {
@@ -35,7 +35,7 @@ function DetailView() {
         <button className="w-screen h-screen overflow-auto grid justify-items-center bg-gray-200" onClick={() => navigate(-1)}>
             <br />
             {userObject === undefined ? <span className={`material-icons-round text-gray-600 animate-spin scale-150`}>loop</span> :
-                <div className="font-sans antialiased text-3xl text-gray-500 font-bold m-4 sm:m-16 grid grid-flow-row gap-y-3 absolute top-16 sm:top-4">
+                <div className="font-sans antialiased text-xl sm:text-3xl text-gray-500 font-bold m-4 sm:m-16 grid grid-flow-row gap-y-3 absolute top-16  max-w-xl sm:top-4">
                     <h2 className="text-red-500 m-4" >Click anywhere to go back</h2>
                     <h1 className="text-left text-blue-500">{userObject.error ? "Error: " + userObject.error : "Requested by: " + userObject.user.name}</h1>
                     <h1 className="text-left text-green-500">Subject: {userObject.error ? "" : ticketsObject?.tickets[index].subject}</h1>

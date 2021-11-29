@@ -14,7 +14,6 @@ async function fetchTicketsData() {
         }
     })
     const data = await response.json()
-    console.log(data)
     return data
 }
 
@@ -25,10 +24,8 @@ async function fetchUserData(userId) {
         }
     })
     const data = await response.json()
-    console.log(data)
     return data
 }
-
 
 app.use(cors({
     origin: '*'
@@ -48,3 +45,6 @@ app.get("/api/user", async (req, res) => {
 app.listen(PORT, () => {
     console.log(`Server listening on ${PORT}`);
 })
+
+// export for testing
+export default app

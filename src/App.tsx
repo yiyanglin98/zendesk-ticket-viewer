@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     async function getTicketData() {
       try {
-        const response = await axios.get('http://localhost:3001/api/tickets', { timeout: 5000 })
+        const response = await axios.get('http://localhost:3001/api/tickets', { timeout: 8000 })
         console.log(response)
         setTicketsObject(response.data)
       } catch (error) {
