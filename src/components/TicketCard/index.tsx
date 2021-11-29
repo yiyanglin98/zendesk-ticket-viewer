@@ -1,7 +1,7 @@
 import "./index.css";
 import { Link } from "react-router-dom";
 
-function TicketCard({ subject, status, index }: { subject: string, status: "new" | "pending" | "open" | "unknown", index: number }) {
+function TicketCard({ subject, status, index }: { subject: string, status: "new" | "pending" | "open" | "unknown", index: number | string }) {
     let icon = "circle"
     let color = "gray"
     if (status === 'new') {
